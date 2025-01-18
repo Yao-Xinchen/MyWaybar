@@ -1,0 +1,67 @@
+// ### DEFAULT Top -Laptop ### //
+{
+"include": "~/.config/waybar/modules",
+"layer": "top",
+//"mode": "dock",
+"exclusive": true,
+"passthrough": false,
+"position": "top",
+"spacing": 6,
+"fixed-center": true,
+"ipc": true,
+"margin-top": 10,
+"margin-left": 10,
+"margin-right": 10,
+
+"modules-left": [
+	"custom/power",
+	"custom/separator#dot-line",
+	"cpu",
+	"custom/separator#dot-line",
+	"temperature",
+	"custom/separator#dot-line", 
+	"memory",
+	"custom/separator#dot-line",
+    "custom/nvidia-gpu",
+	"custom/separator#dot-line",
+    "custom/nvidia-ram",
+	],
+
+"modules-center": [
+	"custom/swaync",
+    "custom/separator#dot-line",
+    "hyprland/workspaces#pacman",
+	"custom/separator#dot-line",
+	"idle_inhibitor",
+	], 
+
+"modules-right": [
+	"custom/keyboard",
+	"custom/separator#dot-line",
+	"pulseaudio",
+	"custom/separator#dot-line",
+	"pulseaudio#microphone",
+	"custom/separator#dot-line", 
+	"bluetooth",
+	"custom/separator#dot-line",
+	"network",
+	"custom/separator#dot-line",
+    "battery",
+	"custom/separator#dot-line",
+	"clock",
+	],
+
+"custom/nvidia-gpu": {
+    "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,nounits,noheader | awk -F', ' '{printf \"%d%%\", $1}'",
+    "format": "{}",
+    "interval": 2
+},
+
+"custom/nvidia-ram": {
+    "exec": "nvidia-smi --query-gpu=memory.used,memory.total --format=csv,nounits,noheader | awk -F', ' '{printf \"%d/%d\", $1, $2}'",
+    "format": "{}",
+    "interval": 2
+},
+
+}
+
