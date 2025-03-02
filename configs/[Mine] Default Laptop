@@ -28,11 +28,11 @@
 	],
 
 "modules-center": [
-	"custom/swaync",
-    "custom/separator#dot-line",
+	"idle_inhibitor",
+	"custom/separator#dot-line",
     "hyprland/workspaces#pacman",
 	"custom/separator#dot-line",
-	"idle_inhibitor",
+    "hyprland/window",
 	], 
 
 "modules-right": [
@@ -41,12 +41,8 @@
 	"pulseaudio",
 	"custom/separator#dot-line",
 	"pulseaudio#microphone",
-	"custom/separator#dot-line", 
-	"bluetooth",
 	"custom/separator#dot-line",
 	"network",
-	"custom/separator#dot-line",
-    "battery",
 	"custom/separator#dot-line",
 	"clock",
 	],
