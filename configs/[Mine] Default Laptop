@@ -33,6 +33,8 @@
 	"custom/separator#dot-line",
 	"pulseaudio#microphone",
 	"custom/separator#dot-line",
+    "bluetooth",
+	"custom/separator#dot-line",
 	"network",
 	"custom/separator#dot-line",
 	"clock",
